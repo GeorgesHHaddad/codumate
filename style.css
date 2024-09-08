@@ -1,0 +1,323 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;  /* Vertically center items */
+    justify-content: space-between; /* Space items horizontally */
+    background-color: #5371ff; /* The blue color */
+    color: white;
+    padding: 20px;
+    position: relative; /* Ensure logo positioning is relative to header */
+}
+
+/* Container for logo */
+.logo-container {
+    flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+/* Responsive logo styling */
+.logo {
+    max-width: 200px; /* Set a maximum width */
+    height: auto;     /* Maintain aspect ratio */
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation */
+nav {
+    margin-top: 20px; /* Space between title and navigation */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Horizontal layout for navigation items */
+    justify-content: center; /* Center align the items */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #2f59d1; /* Darker blue on hover */
+}
+
+/* Main section styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 60px;
+}
+
+section h2, section h3 {
+    color: #5371ff; /* The blue color */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #333;
+}
+
+/* Centering the titles and text */
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Contact Form */
+#contactForm {
+    display: flex;
+    flex-direction: column; /* Arrange form elements vertically */
+    align-items: center; /* Center align form elements */
+    max-width: 600px; /* Set a max-width for the form */
+    margin: 0 auto; /* Center the form within the section */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #5371ff; /* Blue color for labels */
+    font-size: 1.1em;
+    text-align: center;
+    width: 100%;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    max-width: 500px; /* Ensure inputs and textarea don't stretch too wide */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#contactForm button {
+    background-color: #5371ff; /* Blue color for button */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: #2f59d1; /* Darker blue on hover */
+}
+
+/* Ensure the contact form elements are centered and spaced correctly */
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #5371ff; /* Blue border on focus */
+}
+
+/* Course section styling */
+.course-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.course-type {
+    max-width: 800px;
+    text-align: left;
+    background-color: #f9f9f9; /* Slightly different background for course sections */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-type h3 {
+    color: #5371ff; /* Blue color for headings */
+    font-size: 2em;
+}
+
+.course-type h4 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #5371ff; /* Blue color for subheadings */
+}
+
+.course-catalog {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.course-catalog li {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    margin: 10px 0;
+}
+
+.course-catalog li a {
+    color: #5371ff; /* Blue color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.course-catalog li a:hover {
+    text-decoration: underline;
+    color: #2f59d1; /* Darker blue on hover */
+}
+
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #5371ff; /* Blue color */
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Animations for widgets */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section, header, footer, .image-gallery img, nav ul, .course-type {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Hover effect on navigation */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure all animations are smooth */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Vertical tabs styling (if needed) */
+.tab-container {
+    display: flex;
+    flex-direction: column; /* Align tabs vertically */
+}
+
+.tab-item {
+    padding: 10px;
+    background-color: #5371ff; /* Blue background for tabs */
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab-item:hover {
+    background-color: #2f59d1; /* Darker blue on hover */
+}
+
+.tab-content {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Ensure the main container for categories displays items horizontally */
+.course-category {
+    display: flex;
+    flex-direction: column; /* Stack categories vertically */
+    align-items: center; /* Center align categories horizontally */
+    gap: 40px; /* Space between categories */
+}
+
+/* Horizontal layout for age columns within each category */
+.age-columns {
+    display: flex; /* Arrange age columns horizontally */
+    gap: 20px; /* Space between age columns */
+    justify-content: center; /* Center align age columns horizontally */
+    width: 100%; /* Ensure container takes full width */
+}
+
+/* Ensure consistent spacing and alignment for the Show More link */
+.age-column {
+    max-width: 300px; /* Limit width of each column */
+    text-align: center; /* Center text in each column */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    flex: 1; /* Allow columns to grow and shrink as needed */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
+}
+
+/* Styling for Show More link */
+.show-more {
+    display: block;
+    color: #5371ff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto; /* Push to the bottom of the column */
+    transition: color 0.3s ease;
+}
+
+.show-more:hover {
+    color: #2f59d1; /* Darker blue on hover */
+}
+
