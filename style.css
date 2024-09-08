@@ -321,3 +321,14 @@ nav ul li a:hover {
     color: #2f59d1; /* Darker blue on hover */
 }
 
+/* Hide content by default */
+.desktop-content {
+    display: none;
+}
+
+/* Show content only on desktop devices */
+@media only screen and (min-width: 769px) {
+    .desktop-content {
+        display: block;
+    }
+}

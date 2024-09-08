@@ -4,18 +4,18 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Trigger animation when the page is fully loaded
-    const fadeInElements = document.querySelectorAll('.fade-in');
-    const slideInElements = document.querySelectorAll('.slide-in');
+// JavaScript to detect if the user is on a mobile device
+document.addEventListener("DOMContentLoaded", function () {
+    // Detect if the device is mobile
+    function isMobileDevice() {
+        return /Mobi|Android/i.test(navigator.userAgent);
+    }
 
-    fadeInElements.forEach((el) => {
-        el.style.opacity = 1;
-        el.style.animation = 'fadeIn 1s ease-out';
-    });
-
-    slideInElements.forEach((el) => {
-        el.style.opacity = 1;
-        el.style.animation = 'slideIn 1s ease-out';
-    });
+    // If it's not a mobile device, show the desktop content
+    if (!isMobileDevice()) {
+        var elements = document.querySelectorAll(".desktop-content");
+        elements.forEach(function(element) {
+            element.style.display = "block";
+        });
+    }
 });
