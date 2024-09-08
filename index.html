@@ -3,33 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Device Detection Example</title>
-    <style>
-        /* Hide content on mobile devices */
-        @media only screen and (max-width: 768px) {
-            .desktop-content {
-                display: none;
-            }
-        }
-
-        /* Show content on desktop devices */
-        @media only screen and (min-width: 769px) {
-            .desktop-content {
-                display: block;
-            }
-        }
-
-        body {
-            text-align: center;
-            padding: 50px;
-        }
-    </style>
+    <title>CoduMate - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Content that will only be visible on desktop -->
     <div class="desktop-content">
-        <h1>Welcome to the desktop version of the website!</h1>
-        <p>This content is visible only on desktop devices.</p>
+        <header>
+            <div class="logo-container">
+                <img src="images/codumate_logo.png" alt="CoduMate Logo" class="logo">
+            </div>
+            <h1>Welcome to CoduMate</h1>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="home">
+            <h2>Your Friend in Coding and Robotics Education</h2>
+            <p>
+                At CoduMate, we believe in the power of education. Our mission is to help students learn robotics and programming languages in a friendly, supportive environment. 
+                The "Codu" in our name represents the world of coding and programming, while "Mate" signifies that we will be there as a guide, like a friend, by each student’s side to help them succeed.
+            </p>
+            <p>
+                Whether you’re a beginner or a more advanced student, our team will guide you step by step to master the exciting world of coding and robotics.
+            </p>
+        </section>
+        <footer>
+            <p>&copy; 2024 CoduMate. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
