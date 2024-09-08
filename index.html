@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Device Detection</title>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Function to detect if it's a mobile device
-            function isMobileDevice() {
-                return /Mobi|Android/i.test(navigator.userAgent);
+    <title>Device Detection Example</title>
+    <style>
+        /* Hide content on mobile devices */
+        @media only screen and (max-width: 768px) {
+            .desktop-content {
+                display: none;
             }
+        }
 
-            // Display message based on the device
-            if (isMobileDevice()) {
-                document.getElementById("device-info").textContent = "You are using a mobile device.";
-            } else {
-                document.getElementById("device-info").textContent = "You are using a desktop device.";
+        /* Show content on desktop devices */
+        @media only screen and (min-width: 769px) {
+            .desktop-content {
+                display: block;
             }
-        });
-    </script>
+        }
+
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
 </head>
 <body>
-
-    <h1>Device Detection Example</h1>
-    <p id="device-info"></p>
-
+    <!-- Content that will only be visible on desktop -->
+    <div class="desktop-content">
+        <h1>Welcome to the desktop version of the website!</h1>
+        <p>This content is visible only on desktop devices.</p>
+    </div>
 </body>
 </html>
