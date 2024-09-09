@@ -25,14 +25,33 @@
         </div>
         <h1>Robotics Simulations </h1>
         <nav>
-            <ul>
+            <ul class="nav-menu">
                 <li><a href="../../../../index.html">Home</a></li>
                 <li><a href="../../../about.html">About Us</a></li>
                 <li><a href="../../../services.html">Services</a></li>
                 <li><a href="../../../contact.html">Contact</a></li>
             </ul>
         </nav>
+        <!-- Hamburger Menu Icon -->
+        <button class="hamburger" aria-label="Toggle Menu">
+            &#9776;
+        </button>
     </header>
+
+    <!-- Full screen overlay for navigation menu -->
+    <div class="nav-overlay">
+        <!-- Close button (positioned the same as hamburger) -->
+        <button class="close-menu" aria-label="Close Menu">
+            &times;
+        </button>
+        <!-- Nav items -->
+        <ul>
+            <li><a href="../../../../index.html">Home</a></li>
+            <li><a href="../../../about.html">About Us</a></li>
+            <li><a href="../../../services.html">Services</a></li>
+            <li><a href="../../../contact.html">Contact</a></li>
+        </ul>
+    </div>
 
 
     <section id="robotics-simulation">
@@ -69,5 +88,6 @@
     <footer>
         <p>&copy; 2024 CoduMate. All rights reserved.</p>
     </footer>
+    <script src="../../../../Scripts/script.js"></script> <!-- Link to JavaScript file --> 
 </body>
 </html>
